@@ -1,0 +1,75 @@
+body {
+    background-color: #1e1e2f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  form.form {
+    background-color: #2a2a40;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+  }
+  
+  form.form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  form.form input[type="number"] {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b3b52;
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ccc;
+  }
+  
+  legend {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #aaa;
+  }
+
+
+  form.form input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #4caf50;
+  }
+  
+  form.form button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  form.form button[type="submit"]:hover {
+    background-color: #43a047;
+  }
+  
