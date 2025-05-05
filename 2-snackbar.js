@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";const r=document.querySelector(".form");r.addEventListener("submit",s=>{s.preventDefault();const t=Number(document.querySelector('input[name="delay"]').value),o=document.querySelector('input[name="state"]:checked').value;new Promise((e,i)=>{setTimeout(()=>{o==="fulfilled"?e(t):i(t)},t)}).then(e=>{iziToast.success({title:"Success",message:`✅ Fulfilled in ${e}ms`,position:"topRight"})}).catch(e=>{iziToast.error({title:"Error",message:`❌ Rejected in ${e}ms`,position:"topRight"})})});
+//# sourceMappingURL=2-snackbar.js.map
