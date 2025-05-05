@@ -1,3 +1,5 @@
+import 'iziToast/dist/css/iziToast.min.css';
+import iziToast from 'izitoast';
 const formEl = document.querySelector('.form');
 
 formEl.addEventListener('submit', (e) => {
@@ -21,14 +23,14 @@ formEl.addEventListener('submit', (e) => {
       iziToast.success({
         title: 'Success',
         message: `✅ Fulfilled in ${delay}ms`,
-        position: 'topRight',
+        position: 'topCenter',
       });
     })
     .catch((delay) => {
       iziToast.error({
         title: 'Error',
         message: `❌ Rejected in ${delay}ms`,
-        position: 'topRight',
+        position: 'topCenter',
       });
     });
 });
