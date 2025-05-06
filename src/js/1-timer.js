@@ -25,13 +25,10 @@ const options = {
       return;
     }
 
-    // Başarılı seçim
     startBtn.disabled = false;
 
-    // input'u kilitle, tekrar seçim engellenir
     inputEl.disabled = true;
 
-    // flatpickr arayüzünü DOM'dan sil
     const calendarEl = document.querySelector('.flatpickr-calendar');
     if (calendarEl) calendarEl.remove();
 
