@@ -15,7 +15,7 @@ const options = {
      if(selectedDates[0] < new Date()) {
         iziToast.error({
             title: 'Hata',
-            message: 'Geçmiş bir tarih seçtin!',
+            message: "Please choose a date in the future",
             position: 'topCenter',
           });
         return;
@@ -54,7 +54,6 @@ function addLeadingZero(value) {
   }
 startBtn.addEventListener("click", () => {
     startBtn.disabled = true;
-    flatpickrInstance.destroy(0);
     let timerId = setInterval(() => {
         const currentTime = new Date();
         const deltaTime = userSelectedDate - currentTime;
@@ -67,6 +66,7 @@ startBtn.addEventListener("click", () => {
         document.querySelector("span[data-hours]").textContent = addLeadingZero(hours);
         document.querySelector("span[data-minutes]").textContent = addLeadingZero(minutes);
         document.querySelector("span[data-seconds]").textContent = addLeadingZero(seconds);
+        startBtn.disabled = false;
     }, 1000);
 }
 );
