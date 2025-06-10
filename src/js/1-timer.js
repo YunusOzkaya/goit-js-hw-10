@@ -6,6 +6,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 let userSelectedDate;
 const startBtn = document.querySelector("button[data-start]");
 const inputEl = document.querySelector("#datetime-picker");
+
 startBtn.disabled = true;
 
 const options = {
@@ -22,17 +23,12 @@ const options = {
         message: "Please choose a date in the future",
         position: 'topCenter',
       });
+      startBtn.disabled = true;
       return;
     }
 
     startBtn.disabled = false;
-
-    inputEl.disabled = true;
-
-    const calendarEl = document.querySelector('.flatpickr-calendar');
-    if (calendarEl) calendarEl.remove();
-
-    console.log('Tarih kilitlendi:', userSelectedDate);
+    console.log('Tarih seçildi:', userSelectedDate);
   },
 };
 
@@ -58,13 +54,15 @@ function addLeadingZero(value) {
 
 startBtn.addEventListener("click", () => {
   startBtn.disabled = true;
+  inputEl.disabled = true;
 
-  let timerId = setInterval(() => {
+  const timerId = setInterval(() => {
     const currentTime = new Date();
     const deltaTime = userSelectedDate - currentTime;
 
     if (deltaTime <= 0) {
       clearInterval(timerId);
+      inputEl.disabled = false; // Geri sayım tamamlanınca giriş tekrar etkin
       return;
     }
 
