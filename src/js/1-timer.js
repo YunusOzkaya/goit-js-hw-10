@@ -62,7 +62,7 @@ startBtn.addEventListener("click", () => {
 
     if (deltaTime <= 0) {
       clearInterval(timerId);
-      inputEl.disabled = false; // Geri sayım tamamlanınca giriş tekrar etkin
+      inputEl.disabled = false;
       return;
     }
 
